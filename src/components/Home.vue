@@ -1,14 +1,11 @@
 <template>
   <div class="hello">
-    <!-- the msg thing is how you pass props -->
-    <h1>Hi jared {{ msg }}</h1>
-    <div>
-      <h2>this is from vue</h2>
-    </div>
+    <h1>Hello World</h1>
   </div>
 </template>
 
 <script>
+// when you pass props, you want to define it here with its type
 export default {
   name: "Home",
   props: {

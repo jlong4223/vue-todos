@@ -1,31 +1,53 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Other target="{{target}}" />
-  <Home msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <!-- use the components here -->
+    <Todos />
+  </div>
 </template>
 
 <script>
-import Home from "./components/Home.vue";
-import Other from "./components/Other";
-
-// const target = "target";
+// import components here
+import Todos from "./components/Todos";
 
 export default {
   name: "App",
+  // define components here
   components: {
-    Home,
-    Other,
+    Todos,
+  },
+  data() {
+    return {
+      todos: [
+        {
+          id: 1,
+          title: "Todo one",
+          completed: false,
+        },
+        {
+          id: 2,
+          title: "Todo two",
+          completed: true,
+        },
+        {
+          id: 3,
+          title: "Todo three",
+          completed: false,
+        },
+      ],
+    };
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
 }
 </style>
