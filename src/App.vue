@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- use the components here -->
-    <Todos />
+    <!-- v-bind is how you pass data as props -->
+    <Todos v-bind:todos="todos" />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ export default {
   components: {
     Todos,
   },
+  // data is essentially the state data
   data() {
     return {
       todos: [
